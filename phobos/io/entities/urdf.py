@@ -249,7 +249,7 @@ def exportUrdf(model, outpath):
         if j in model['joints']:
             joint = model['joints'][j]
             output.append(
-                indent * 2 + '<joint name="' + prefix_string+joint['name'] + '" type="' + joint["type"] + '">\n'
+                indent * 2 + '<joint name="joint_' + prefix_string+joint['name'] + '" type="' + joint["type"] + '">\n'
             )
             child = model['links'][joint["child"]]
             output.append(
